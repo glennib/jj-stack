@@ -335,9 +335,9 @@ export async function createOrUpdateStackComment(
     const stackItem = prCommentData.stack[i];
     const isCurrent = i === currentBookmarkIdx;
     if (isCurrent) {
-      commentBody += `1. **${stackItem.bookmarkName} ${stackCommentThisPRText}**\n`;
+      commentBody += `1. **${stackItem.prUrl} ${stackCommentThisPRText}**\n`;
     } else {
-      commentBody += `1. [${stackItem.bookmarkName}](${stackItem.prUrl})\n`;
+      commentBody += `1. ${stackItem.prUrl}\n`;
     }
   }
 
